@@ -5,9 +5,10 @@ import Title from "../Title/Title";
 import "./styles.css";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import Slider from "react-slick";
-
+import avt from "../../assets/images/avt-15.jpg";
 import collectionItem from "../../assets/images/collection-item.png";
 import collectionImage from "../../assets/images/collection-image.jpg";
+import Likes from "../Likes/Likes";
 
 export const NextArrow = ({ onClick }: any) => {
   return (
@@ -93,17 +94,21 @@ const PopularCollection = () => {
                 <img src={collectionImage} alt="" />
               </div>
               <div className="bottom-pop-card">
-                <div className="seller-left popular">
+                <div className="popular">
+                  <img src={avt} alt="" />
                   <div>
                     <AiOutlineCheck />
                   </div>
                 </div>
-                <div className="content">
-                  <Link to="/">Creative Art Collection</Link>
-                  <div>
-                    <span>Created by</span>
-                    <Link to="/">{item.name}</Link>
+                <div className="likes-content">
+                  <div className="content">
+                    <Link to="/">Creative Art Collection</Link>
+                    <div>
+                      <span>Created by</span>
+                      <Link to="/">{item.name}</Link>
+                    </div>
                   </div>
+                  <Likes popularCollection={true} />
                 </div>
               </div>
             </div>

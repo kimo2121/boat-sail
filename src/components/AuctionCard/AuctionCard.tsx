@@ -7,6 +7,7 @@ import { ReactComponent as ShoppingBag } from "../../assets/icons/shopping-bag.s
 import { FiRefreshCw } from "react-icons/fi";
 // import { AuctionDataType } from "../LiveAuctions/LiveAuctions";
 import cardItem from "../../assets/images/card-item.jpg";
+import Likes from "../Likes/Likes";
 interface CardType {
   TodayPick: boolean;
 }
@@ -33,7 +34,7 @@ const AuctionCard = ({ TodayPick, item }: any) => {
     <div
       className={TodayPick ? "auction-card today-pick-card" : "auction-card"}
     >
-      <div className={"card-top"}>
+      <div className="card-top">
         <img src={cardItem} alt="" />
         {!TodayPick ? (
           <button className="place-bid">
@@ -41,20 +42,7 @@ const AuctionCard = ({ TodayPick, item }: any) => {
             Place Bid
           </button>
         ) : undefined}
-        <div
-          onClick={() => {
-            handleLikes();
-            handleIncrease();
-          }}
-          className="card-likes"
-        >
-          {increase ? (
-            <FaRegHeart size="15" color="white" />
-          ) : (
-            <FaHeart size="15" color="red" />
-          )}
-          <p>{likes}</p>
-        </div>
+        <Likes popularCollection={false} />
       </div>
       {!TodayPick ? <Timer mintStartAt={time} /> : undefined}
       <div className="card-bottom">
