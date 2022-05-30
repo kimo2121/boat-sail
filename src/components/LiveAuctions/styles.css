@@ -1,0 +1,76 @@
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+
+.live-auction {
+  background-color: #14141f;
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
+.cards-container {
+}
+
+.slider-container {
+  width: 1440px;
+  height: 100%;
+  margin: 0 auto;
+}
+.slick-list {
+  overflow-y: unset !important;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+.slider-container .slick-dots {
+  bottom: -40px;
+}
+
+.slider-container .slick-dots button::before {
+  width: 5px;
+  height: 5px;
+  border: 3px solid white;
+  border-radius: 50%;
+  content: "";
+}
+.slick-active button::before {
+  border: 3px solid red white;
+  width: 8px !important;
+  height: 8px !important;
+}
+
+.arrow {
+  color: rgb(194, 194, 194);
+  position: absolute;
+  cursor: pointer;
+  z-index: 120;
+  width: 30px;
+  font-size: 20px;
+  height: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.arrow:hover {
+  color: white;
+}
+
+.left-direction {
+  margin-left: 5% !important;
+}
+.right-direction {
+  margin-left: -5% !important;
+}
+.next {
+  left: 57%;
+  bottom: -10%;
+}
+.prev {
+  left: 42%;
+  bottom: -10%;
+}
+@media screen and (max-width: 1440px) {
+  .slider-container {
+    width: 100%;
+  }
+  .slider-container {
+    height: 100%;
+  }
+}

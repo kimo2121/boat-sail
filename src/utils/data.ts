@@ -1,0 +1,68 @@
+const data: any = [
+  {
+    likes: 200,
+    name: "Living Vase 01 By Lanz...",
+    currency: "BBC",
+    price: "4.89 ETH",
+    creator: "Freddie Car...",
+    time: 1657886400,
+  },
+  {
+    likes: 200,
+    name: "Living Vase 01 By Lanz...",
+    currency: "BBC",
+    price: "4.89 ETH",
+    creator: "Freddie Car...",
+    time: 1657886400,
+  },
+  {
+    likes: 200,
+    name: "Living Vase 01 By Lanz...",
+    currency: "BBC",
+    price: "4.89 ETH",
+    creator: "Freddie Car...",
+    time: 1657886400,
+  },
+  {
+    likes: 200,
+    name: "Living Vase 01 By Lanz...",
+    currency: "BBC",
+    price: "4.89 ETH",
+    creator: "Freddie Car...",
+    time: 1657886400,
+  },
+  {
+    likes: 200,
+    name: "Living Vase 01 By Lanz...",
+    currency: "BBC",
+    price: "4.89 ETH",
+    creator: "Freddie Car...",
+    time: 1657886400,
+  },
+  {
+    likes: 200,
+    name: "Living Vase 01 By Lanz...",
+    currency: "BBC",
+    price: "4.89 ETH",
+    creator: "Freddie Car...",
+    time: 1657886400,
+  },
+  {
+    likes: 200,
+    name: "Living Vase 01 By Lanz...",
+    currency: "BBC",
+    price: "4.89 ETH",
+    creator: "Freddie Car...",
+    time: 1657886400,
+  },
+  {
+    likes: 200,
+    name: "Living Vase 01 By Lanz...",
+    currency: "BBC",
+    price: "4.89 ETH",
+    creator: "Freddie Car...",
+    time: 1657886400,
+  },
+];
+
+export default data;
