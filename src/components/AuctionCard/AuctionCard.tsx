@@ -8,6 +8,8 @@ import { FiRefreshCw } from "react-icons/fi";
 // import { AuctionDataType } from "../LiveAuctions/LiveAuctions";
 import cardItem from "../../assets/images/card-item.jpg";
 import Likes from "../Likes/Likes";
+import Button from "../MoreComponents/Button";
+
 interface CardType {
   TodayPick: boolean;
 }
@@ -37,10 +39,12 @@ const AuctionCard = ({ TodayPick, item }: any) => {
       <div className="card-top">
         <img src={cardItem} alt="" />
         {!TodayPick ? (
-          <button className="place-bid">
-            <ShoppingBag />
-            Place Bid
-          </button>
+          <Button
+            placeBid1={true}
+            icon={<ShoppingBag />}
+            className="place-bid"
+            label="Place Bid"
+          />
         ) : undefined}
         <Likes popularCollection={false} />
       </div>

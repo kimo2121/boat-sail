@@ -56,28 +56,6 @@
   /* width: 15%; */
   width: 270px;
 }
-.email-send {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding-left: 10px;
-  height: 50px;
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.178);
-  border-radius: 10px;
-  margin-top: 20px;
-}
-.email-send input {
-  background-color: transparent;
-  border: none;
-  width: 50%;
-  outline: none;
-  color: rgba(255, 255, 255, 0.502);
-}
-.email-send:focus-within {
-  border: 1px solid #5141fc;
-}
 
 .email-svg {
   width: 50px;
@@ -90,9 +68,7 @@
   border-top-right-radius: 10px;
   background-color: #5141fc;
 }
-.email-send svg {
-  fill: white;
-}
+
 .social-contact {
   display: flex;
   margin-top: 20px;

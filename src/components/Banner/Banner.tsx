@@ -1,6 +1,7 @@
 import "./styles.css";
 import { GoRocket } from "react-icons/go";
 import { GiFiles } from "react-icons/gi";
+import Button from "../MoreComponents/Button";
 const Banner = () => {
   return (
     <div className="banner">
@@ -12,12 +13,18 @@ const Banner = () => {
         Marketplace for Monster Character Collections Non Fungible Token NFTs
       </span>
       <div className="banner-btns">
-        <button className="explore">
-          <GoRocket /> Explore
-        </button>
-        <button className="create">
-          <GiFiles /> Create
-        </button>
+        <Button
+          icon={<GoRocket />}
+          label="Explore"
+          bannerBtn={true}
+          className="explore"
+        />
+        <Button
+          icon={<GiFiles />}
+          label="Create"
+          bannerBtn={true}
+          className="explore"
+        />
       </div>
     </div>
   );

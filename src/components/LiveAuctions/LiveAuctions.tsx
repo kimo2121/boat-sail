@@ -5,6 +5,7 @@ import "./styles.css";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import Slider from "react-slick";
 import data from "../../utils/data";
+import { Link } from "react-router-dom";
 
 export const NextArrow = ({ onClick }: any) => {
   return (
@@ -41,8 +42,9 @@ const LiveAuctions = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     swipe: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    arrows: false,
+    // nextArrow: <NextArrow />,
+    // prevArrow: <PrevArrow />,
     responsive: [
       {
         breakpoint: 1300,
@@ -75,8 +77,15 @@ const LiveAuctions = () => {
 
   return (
     <div className="live-auction">
-      <Title title="Live Auctions" />
-      {/* <div className="cards-container"> */}
+      {window.location.pathname === "/Item-Details" ? (
+        <div className="live-auction-second-header">
+          <h1>Live Auctions</h1>
+          <Link to="/">EXPLORE MORE</Link>
+        </div>
+      ) : (
+        <Title title="Live Auctions" />
+      )}
+
       <Slider className="slider-container" {...settings}>
         {data.map((item: any, index: any) => (
           <AuctionCard item={item} TodayPick={false} />

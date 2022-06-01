@@ -31,7 +31,7 @@ const Likes = ({ popularCollection }: any) => {
       ) : (
         <FaHeart size="15" color="red" />
       )}
-      <p>{likes}</p>
+      <span>{likes}</span>
     </div>
   );
 };

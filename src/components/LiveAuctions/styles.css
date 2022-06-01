@@ -66,9 +66,41 @@
   left: 42%;
   bottom: -10%;
 }
+.live-auction-second-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1350px;
+  font-weight: 700;
+  align-items: center;
+}
+.live-auction-second-header a {
+  background: linear-gradient(to right, #e250e5, #4b50e6, #e250e5);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-weight: 700;
+  font-weight: 14px;
+  background-size: 200% 200%;
+  animation: rainbow 2s ease-in-out infinite;
+  color: white;
+  transition: color 0.2s ease-in-out;
+  border-bottom: 1px solid white;
+}
+
+.live-auction-second-header a:hover {
+  color: transparent;
+}
+.live-auction-second-header h1 {
+  color: white;
+  font-weight: 600;
+}
 @media screen and (max-width: 1440px) {
   .slider-container {
     width: 100%;
+  }
+  .live-auction-second-header {
+    width: 100%;
+    padding: 0 20px;
   }
   .slider-container {
     height: 100%;

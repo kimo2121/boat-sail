@@ -13,10 +13,10 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
 .card-top img {
   width: 100%;
   border-radius: 10px;
-  height: 100%;
 }
 
 .auction-card.today-pick-card {
@@ -24,28 +24,6 @@
   width: 95%;
 }
 
-.card-top {
-}
-
-.place-bid {
-  padding: 12px 27px;
-  color: black;
-  opacity: 0;
-  border-radius: 20px;
-  outline: none;
-  display: flex;
-  cursor: pointer;
-  font-size: 15px;
-  font-weight: 700;
-  border: 0;
-  position: relative;
-  top: -120px;
-  background-color: white;
-  justify-content: center;
-  margin: auto;
-  align-items: center;
-  transition: all 0.5s;
-}
 .place-bid.today-pick {
   background-color: transparent;
   opacity: 1;
@@ -53,31 +31,26 @@
   border: 2px solid #5142fc;
   top: 0px;
   margin: 0;
-}
-.auction-card:hover .place-bid {
-  opacity: 1;
-  transform: translateY(-30px);
-}
-.auction-card:hover .place-bid.today-pick {
-  opacity: 1;
-  transform: translateY(0px);
+  left: 0;
+  position: relative;
+  transform: translate(0, 0);
+  z-index: 0;
 }
 
-.place-bid:hover {
-  color: white;
-  background-color: #5142fc;
+.auction-card:hover .place-bid.today-pick {
+  top: 0px;
+  margin: 0;
 }
+
+.auction-card:hover .place-bid.today-pick {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .place-bid.today-pick:hover {
   color: black;
   border-color: white;
   background-color: white;
-}
-.place-bid svg {
-  transition: all 0.5s;
-  width: 22px;
-  fill: #5142fc;
-  margin-right: 10px;
-  height: 22px;
 }
 
 .footer-history {
@@ -113,7 +86,7 @@
 
 .card-bottom {
   background-color: transparent;
-  height: 100px;
+  /* height: 100px; */
   margin-top: 10px;
 }
 .outlined {
@@ -204,6 +177,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: transparent;
+  padding: 0;
+  border-top: 0;
 }
 .meta-info.today-pick-meta {
   margin-top: 10px;
@@ -217,7 +193,4 @@
   .place-bid.today-pick {
     padding: 5px;
   }
-}
-
-@media screen and (max-width: 1024px) {
 }

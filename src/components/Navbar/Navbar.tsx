@@ -1,11 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Dropdown from "../Dropdown.tsx/Dropdown";
 import "./styles.css";
-import { Link } from "react-scroll";
 import logo_white from "../../assets/images/logo_white.png";
 import { FaWallet } from "react-icons/fa";
 import Search from "../Search/Search";
+import { Link } from "react-router-dom";
+
+let useClickOutside = (handler: any) => {
+  let domNode: React.MutableRefObject<any> = useRef();
+
+  useEffect(() => {
+    let maybeHandler = (event: any) => {
+      if (!domNode.current.contains(event.target)) {
+        handler();
+      }
+    };
+
+    document.addEventListener("mousedown", maybeHandler);
+
+    return () => {
+      document.removeEventListener("mousedown", maybeHandler);
+    };
+  });
+
+  return domNode;
+};
+
 const Navbar = () => {
+  let domNode = useClickOutside(() => {
+    setStatus("close");
+    setOpen(false);
+  });
   const [show, handleShow] = useState(false);
 
   const [status, setStatus] = useState("close");
@@ -26,56 +51,85 @@ const Navbar = () => {
     <div className={`navbar-container ${show && "nav_scroll"}`}>
       <div className="navbar">
         <div className="navbar-logo">
-          <img src={logo_white} alt="" />
+          <Link to="/">
+            <img src={logo_white} alt="" />
+          </Link>
         </div>
         <div className="navbar-links">
-          <Link to="MINT" duration={800} smooth={true}>
-            Home
-          </Link>
-          <Link to="MINT" duration={800} smooth={true}>
-            Explorer
-          </Link>
-          <Link to="MINT" duration={800} smooth={true}>
-            Item Details
-          </Link>
-          <Link to="MINT" duration={800} smooth={true}>
-            Activity
-          </Link>
-          <Link to="MINT" duration={800} smooth={true}>
-            Contact
-          </Link>
-          <Link to="MINT" duration={800} smooth={true}>
-            Authors
-          </Link>
+          <Link to="/">Home</Link>
+          <Link to="Explore">Explorer</Link>
+          <Link to="Item-Details">Item Details</Link>
+          <Link to="Activity">Activity</Link>
+          <Link to="Contact">Contact</Link>
+          <Link to="Authors">Authors</Link>
         </div>
-        <div className={open ? "slider-menu active" : "slider-menu"}>
+        <div
+          ref={domNode}
+          className={open ? "slider-menu active" : "slider-menu"}
+        >
           <div>
-            <Link to="MINT" duration={800} smooth={true}>
+            <Link
+              onClick={() => {
+                setStatus(status === "open" ? "close" : "open");
+                setOpen(!open);
+              }}
+              to="/"
+            >
               Home
             </Link>
           </div>
           <div>
-            <Link to="MINT" duration={800} smooth={true}>
+            <Link
+              onClick={() => {
+                setStatus(status === "open" ? "close" : "open");
+                setOpen(!open);
+              }}
+              to="Explore"
+            >
               Explorer
             </Link>
           </div>
           <div>
-            <Link to="MINT" duration={800} smooth={true}>
+            <Link
+              onClick={() => {
+                setStatus(status === "open" ? "close" : "open");
+                setOpen(!open);
+              }}
+              to="Item-Details"
+            >
               Item Details
             </Link>
           </div>
           <div>
-            <Link to="MINT" duration={800} smooth={true}>
+            <Link
+              onClick={() => {
+                setStatus(status === "open" ? "close" : "open");
+                setOpen(!open);
+              }}
+              to="Activity"
+            >
               Activity
             </Link>
           </div>
           <div>
-            <Link to="MINT" duration={800} smooth={true}>
+            <Link
+              onClick={() => {
+                setStatus(status === "open" ? "close" : "open");
+                setOpen(!open);
+              }}
+              to="Contact"
+            >
               Contact
             </Link>
           </div>
           <div>
-            <Link to="MINT" duration={800} smooth={true}>
+            <Link
+              onClick={() => {
+                setStatus(status === "open" ? "close" : "open");
+                setOpen(!open);
+              }}
+              to="Authors"
+            >
               Authors
             </Link>
           </div>

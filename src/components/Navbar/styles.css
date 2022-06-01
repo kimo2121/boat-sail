@@ -15,6 +15,7 @@
   transition: all 0.5s;
   position: fixed;
   z-index: 100;
+  width: 100%;
 }
 .navbar {
   padding: 0 20px;
@@ -34,6 +35,9 @@
 }
 .navbar-links a {
   margin: 0 10px;
+  font-weight: 700;
+  color: white;
+
   cursor: pointer;
   font-size: 18px;
 }
@@ -177,7 +181,11 @@
 .slider-menu.active {
   height: 250px;
 }
-
+@media screen and (max-width: 1440px) {
+  .navbar {
+    width: 100%;
+  }
+}
 @media screen and (max-width: 1200px) {
   .connect-wallet {
     padding: 10px;

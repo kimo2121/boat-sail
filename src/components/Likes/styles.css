@@ -7,7 +7,7 @@
   display: flex;
   width: 64px;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: center !important;
   top: 30px;
   right: 30px;
   border-radius: 7px;

@@ -3,6 +3,7 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo_white.png";
 import { RiSendPlane2Fill } from "react-icons/ri";
+
 import {
   FaTwitter,
   FaFacebook,
@@ -11,6 +12,7 @@ import {
   FaTiktok,
   FaDiscord,
 } from "react-icons/fa";
+import SearchFilterBar from "../MoreComponents/SearchFilterBar";
 
 const data1: Array<any> = [
   "Help & Support",
@@ -73,12 +75,11 @@ const Footer: React.FC = () => {
       </div>
       <div className="footer-marketplace contact-part">
         <h5>Subscribe Us</h5>
-        <div className="email-send">
-          <input placeholder="info@yourgmail.com" type="text" />
-          <div className="email-svg">
-            <RiSendPlane2Fill />
-          </div>
-        </div>
+        <SearchFilterBar
+          className="email-send"
+          icon={<RiSendPlane2Fill />}
+          label="info@yourgmail.com"
+        />
         <div className="social-contact">
           {data4.map((item, indx) => (
             <div key={indx} className="social-contact-item">

@@ -3,12 +3,12 @@ import styled from "styled-components";
 import "./timer.css";
 // import Mint from "../Mint/Mint";
 import { ReactComponent as Flame } from "../../assets/icons/flame.svg";
+import { spawn } from "child_process";
 
 const RowContainer = styled.div`
   color: hsl(0, 0%, 100%);
   display: flex;
   justify-content: center;
-  // gap: 15px;
 `;
 
 // const Heading = styled.h1`
@@ -47,16 +47,19 @@ const ItemValue = styled.span`
 
 const Card = styled.div`
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 `;
 
-const Timer = ({ mintStartAt }: any) => {
+const Timer = ({ mintStartAt, itemDetails }: any) => {
   const [title, setTitle] = useState("");
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinutes] = useState(0);
   const [seconds, setSeconds] = useState(0);
   const [timerVisible, setTimerVisible] = useState(false);
+
   useEffect(() => {
     const timer = setInterval(() => {
       const now = Date.now() / 1000;
@@ -75,33 +78,42 @@ const Timer = ({ mintStartAt }: any) => {
   }, [mintStartAt]);
 
   return (
-    <div className="timer-mint-container">
+    <div
+      className={
+        itemDetails
+          ? "timer-mint-container timer-item-details"
+          : "timer-mint-container"
+      }
+    >
       <Card>
-        <Flame className="flame-timer" />
+        {!itemDetails ? (
+          <Flame className="flame-timer" />
+        ) : (
+          <span className="timer-item-details-span">Countdown</span>
+        )}
         <RowContainer className="timer-container">
           <Item className="days-cirlce">
             <ItemValue id="days">
               {days.toLocaleString("en-US", { minimumIntegerDigits: 2 })}
             </ItemValue>
-            {/* <ItemLabel>Days</ItemLabel> */}
           </Item>
+          <span>:</span>
           <Item className="hours-cirlce">
             <ItemValue id="days">
               {hours.toLocaleString("en-US", { minimumIntegerDigits: 2 })}
             </ItemValue>
-            {/* <ItemLabel>Hours</ItemLabel> */}
           </Item>
+          <span>:</span>
           <Item className="minutes-cirlce">
             <ItemValue id="days">
               {minutes.toLocaleString("en-US", { minimumIntegerDigits: 2 })}
             </ItemValue>
-            {/* <ItemLabel>Mins</ItemLabel> */}
           </Item>
+          <span>:</span>
           <Item className="seconds-cirlce">
             <ItemValue id="days">
               {seconds.toLocaleString("en-US", { minimumIntegerDigits: 2 })}
             </ItemValue>
-            {/* <ItemLabel>Secs</ItemLabel> */}
           </Item>
         </RowContainer>
       </Card>
