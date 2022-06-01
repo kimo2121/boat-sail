@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/logo_white.png";
@@ -15,17 +15,17 @@ import {
 import SearchFilterBar from "../MoreComponents/SearchFilterBar";
 
 const data1: Array<any> = [
-  "Help & Support",
-  "Live Auctions",
-  "Item Details",
-  "Activity",
+  { title: "Help & Support", to: "/Authors" },
+  { title: "Live Auctions", to: "/" },
+  { title: "Item Details", to: "/Item-Details" },
+  { title: "Activity", to: "/Activity" },
 ];
 
 const data2: Array<any> = [
-  "Authors",
-  "Collection",
-  "Author Profile",
-  "Create Item",
+  { title: "Authors", to: "/Authors" },
+  { title: "Collection", to: "/" },
+  { title: "Author Profile", to: "/Authors" },
+  { title: "Create Item", to: "/Authors" },
 ];
 const data4: Array<any> = [
   { icon: <FaTwitter />, link: "/" },
@@ -36,14 +36,21 @@ const data4: Array<any> = [
   { icon: <FaDiscord />, link: "/" },
 ];
 
-const data3: Array<any> = ["Explore", "Contact Us", "Our Blog", "FAQ"];
+const data3: Array<any> = [
+  { title: "Explore", to: "/Explore" },
+  { title: "Contact Us", to: "/Contact" },
+  { title: "Our Blog", to: "/" },
+  { title: "FAQ", to: "/" },
+];
 
 const Footer: React.FC = () => {
   return (
     <div className="footer">
       <div className="footer-div-container"></div>
       <div className="footer-logo">
-        <img src={logo} alt="" />
+        <Link to="/">
+          <img src={logo} alt="" />
+        </Link>
         <p>
           The world’s first social exchange that rewards creators and fans for
           celebrating art + life.
@@ -52,24 +59,24 @@ const Footer: React.FC = () => {
       <div className="footer-marketplace footer-my-account">
         <h5>My Account</h5>
         {data2.map((item, indx) => (
-          <Link key={indx} to="/">
-            {item}
+          <Link key={indx} to={item.to}>
+            {item.title}
           </Link>
         ))}
       </div>
       <div className="footer-marketplace footer-resources">
         <h5>Resources</h5>
         {data1.map((item, indx) => (
-          <Link key={indx} to="/">
-            {item}
+          <Link key={indx} to={item.to}>
+            {item.title}
           </Link>
         ))}
       </div>
       <div className="footer-marketplace">
         <h5>Company</h5>
         {data3.map((item, indx) => (
-          <Link key={indx} to="/">
-            {item}
+          <Link key={indx} to={item.to}>
+            {item.title}
           </Link>
         ))}
       </div>
