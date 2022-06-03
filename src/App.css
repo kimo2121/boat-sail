@@ -1,5 +1,6 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
+
 @keyframes rainbow {
   0% {
     background-position: left;
@@ -12,9 +13,35 @@
   }
 }
 .App {
+  position: relative;
+  /* z-index: 100000 !important; */
   text-align: center;
 }
 
 a {
   text-decoration: none;
+}
+iframe {
+  z-index: -10000 !important;
+}
+body {
+  margin: 0 !important;
+  font-family: "Urbanist", sans-serif !important;
+}
+
+.actionList.action-item {
+  border-bottom: 1px #0eabff33 solid;
+  padding-right: 0;
+  transition: all 0.3s ease;
+}
+.action-icon {
+}
+.actionList.action-item svg {
+  fill: #fff;
+}
+.action-label {
+  color: #fff;
+}
+.actionList.action-item:hover {
+  background-color: #00283e;
 }

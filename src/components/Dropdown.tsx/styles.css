@@ -24,7 +24,7 @@
 
 #main-nav > .menu > li.menu-item-has-children > a::after {
   content: "\f107";
-  font-family: "Font Awesome 5 Pro";
+  /* font-family: "Font Awesome 5 Pro"; */
   font-weight: 300;
   position: absolute;
   right: 0;
@@ -130,7 +130,7 @@
   line-height: normal;
   font-weight: normal;
   content: "\f105";
-  font-family: "Font Awesome 5 Pro";
+  /* font-family: "Font Awesome 5 Pro"; */
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);

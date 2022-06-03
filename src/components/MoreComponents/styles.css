@@ -8,6 +8,7 @@
   align-items: center;
   cursor: pointer;
   padding: 13.5px 30px;
+  font-weight: 600;
   box-sizing: border-box;
   background: transparent none repeat scroll 0 0;
   margin-right: 15px;
@@ -281,6 +282,63 @@
   box-shadow: none;
 }
 
+.connect-wallet span {
+  font-size: 15px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+.connect-wallet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  margin-left: 25px;
+  border: 2px solid #5142fc;
+  color: #fff;
+  background: transparent none repeat scroll 0 0;
+  padding: 12px 35px 12px 32px;
+  border-radius: 30px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.connect-wallet:hover {
+  border: 2px solid #fff;
+  background-color: #fff;
+  color: #5142fc;
+}
+
+.connect-wallet svg {
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+.connect-wallet:hover svg {
+  color: #5142fc;
+}
+.upload-file-btn {
+  border-color: white;
+  font-weight: 600;
+}
+.image-banner-upload {
+  font-weight: 600;
+  margin-right: 0;
+}
+.image-banner-upload:hover {
+  color: #5141fc !important;
+}
+.saveBtn:hover {
+  color: #5141fc !important;
+}
+@media screen and (max-width: 1200px) {
+  .connect-wallet {
+    padding: 10px;
+    justify-content: center;
+    /* width: 48px; */
+    height: 48px;
+  }
+  .connect-wallet span {
+    display: none;
+  }
+}
 @media screen and (max-width: 420px) {
   .bid-history {
     flex-direction: column;

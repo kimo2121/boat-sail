@@ -37,3 +37,8 @@
 .search-bar.active {
   display: block;
 }
+@media screen and (max-width: 676px) {
+  .search-bar {
+    margin-left: 00px;
+  }
+}

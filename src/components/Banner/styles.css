@@ -72,3 +72,9 @@
     font-size: 54px;
   }
 }
+@media screen and (max-width: 450px) {
+  .banner {
+    height: fit-content;
+    /* padding-top: 400px; */
+  }
+}

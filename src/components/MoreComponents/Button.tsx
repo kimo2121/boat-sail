@@ -10,11 +10,16 @@ const Button = ({
   placeBid2,
   authorFollow,
   itemDetails,
+  navBar,
   className,
+  children,
 }: any) => {
   return (
     <div onClick={onClick} className={`custom-button ${className}`}>
-      {bannerBtn || placeBid1 || placeBid2 || itemDetails ? icon : undefined}
+      {bannerBtn || navBar || placeBid1 || placeBid2 || itemDetails
+        ? icon
+        : undefined}
+      {children}
       {label}
     </div>
   );

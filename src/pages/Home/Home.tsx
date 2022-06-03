@@ -13,7 +13,7 @@ import {
   FaYoutube,
   FaTiktok,
 } from "react-icons/fa";
-const Home = () => {
+const Home = (props: any) => {
   return (
     <div>
       <Banner />

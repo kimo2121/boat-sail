@@ -51,8 +51,8 @@ const AuctionCard = ({ TodayPick, item }: any) => {
       {!TodayPick ? <Timer mintStartAt={time} /> : undefined}
       <div className="card-bottom">
         <div className="bottom-first">
-          <Link to="/">{name}</Link>
-          <p>{currency}</p>
+          <Link to="/">{name || "Garraya Richard"}</Link>
+          <p>{currency || "BBC"}</p>
         </div>
         <div className={TodayPick ? "meta-info today-pick-meta" : "meta-info"}>
           <div className="meta-info-left">
@@ -60,14 +60,14 @@ const AuctionCard = ({ TodayPick, item }: any) => {
             <div>
               <span>Creator</span>
               <h6>
-                <Link to="/">{creator}</Link>
+                <Link to="/">{creator || "Rachelsons"}</Link>
               </h6>
             </div>
           </div>
           <div className="meta-info-right">
             <span>Current Bid</span>
             <br />
-            <h5>{price}</h5>
+            <h5>{price || "4.89 ETH"}</h5>
           </div>
         </div>
       </div>

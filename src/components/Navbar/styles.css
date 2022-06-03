@@ -9,6 +9,10 @@
   align-items: center;
   justify-content: space-between;
 }
+.nav-btns {
+  display: flex;
+  align-items: center;
+}
 .nav_scroll {
   background-color: #14141f;
   height: 80px;
@@ -41,42 +45,12 @@
   cursor: pointer;
   font-size: 18px;
 }
-.connect-wallet span {
-  font-size: 15px;
-  font-weight: 700;
-  margin-left: 10px;
-}
-.connect-wallet {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-sizing: border-box;
-  margin-left: 25px;
-  border: 2px solid #5142fc;
-  color: #fff;
-  background: transparent none repeat scroll 0 0;
-  padding: 12px 35px 12px 32px;
-  border-radius: 30px;
-  transition: all 0.3s;
-  cursor: pointer;
-}
-.connect-wallet:hover {
-  border: 2px solid #fff;
-  background-color: #fff;
-  color: #5142fc;
-}
-
-.connect-wallet svg {
-  transition: all 0.3s;
-}
-.connect-wallet:hover svg {
-  color: #5142fc;
-}
 
 .BurgerMenu__container {
   display: none;
   cursor: pointer;
   flex-direction: column;
+
   padding-left: 8px;
 }
 .BurgerMenu__container i {
@@ -121,13 +95,12 @@
   align-items: flex-start;
   z-index: 5;
   height: 0;
-  top: 80px;
+  top: 65px;
   transition: all 0.5s;
   left: 0;
   box-sizing: border-box;
   position: absolute;
   background-color: #14141f;
-
   width: 100%;
 }
 
@@ -186,22 +159,57 @@
     width: 100%;
   }
 }
-@media screen and (max-width: 1200px) {
-  .connect-wallet {
-    padding: 10px;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-  }
-  .connect-wallet span {
-    display: none;
-  }
-}
-@media screen and (max-width: 990px) {
+
+@media screen and (max-width: 1150px) {
   .BurgerMenu__container {
     display: flex;
   }
   .navbar-links {
     display: none;
+  }
+}
+@media screen and (max-width: 676px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: fit-content;
+    padding: 10px 0;
+    height: 130px;
+  }
+
+  .navbar-container {
+    height: fit-content;
+  }
+  .slider-menu {
+    top: 130px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .show-hide-drop {
+    display: none;
+  }
+  .slected.show-hide-drop {
+    display: none !important;
+  }
+}
+@media screen and (max-width: 450px) {
+  .navbar {
+    height: 150px;
+    /* height: fit-content; */
+  }
+  .navbar-container {
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    /* flex-direction: column; */
+  }
+  .nav-btns {
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+    /* flex-wrap: wrap; */
+    /* height: 70%; */
+  }
+  .slider-menu {
+    top: 150px;
   }
 }
