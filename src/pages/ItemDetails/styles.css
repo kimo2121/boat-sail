@@ -4,6 +4,7 @@
   background-color: #14141f;
   padding: 80px 20px;
   max-width: 1440px;
+  margin: 0 auto;
   justify-content: space-between;
 }
 .item-details {

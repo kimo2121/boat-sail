@@ -1,6 +1,7 @@
 .place-bid-on-item {
   width: 100%;
   position: relative;
+  margin: 0 auto;
 }
 .place-bid-top div:first-child {
   margin-right: 20px;

@@ -1,13 +1,14 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-.live-auction,
-.pageItemDetail {
+.live-auction {
   background-color: #14141f;
   padding-top: 80px;
-  width: 1440px;
+  /* max-width: 1440px; */
+  margin: 0 auto;
   padding-bottom: 70px;
 }
+
 .cards-container {
 }
 
