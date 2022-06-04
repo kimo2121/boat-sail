@@ -27,6 +27,14 @@ import CreateItemPage from "./pages/Create/CreateItemPage";
 import CreateCollectionPage from "./pages/Create/CreateCollectionPage";
 import AccountPage from "./pages/account/AccountPage";
 import SettingsPage from "./pages/settings/SettingsPage";
+import CollectionsPage from "./pages/colloctions/CollectionsPage";
+import VelasPage from "./pages/velas/VelasPage";
+import MyCollectionsPage from "./pages/myColloctions/MyCollectionsPage";
+import MyNFTsPage from "./pages/myNfts/MyNFTsPage";
+import CollectionDetailPage from "./pages/colloctions/CollectionDetailPage/CollectionDetailPage";
+import VelasClubPage from "./pages/velas/vleasClub/VelasClubPage";
+import LatestTradePage from "./pages/latestTrade/LatestTradePage";
+import LatestOffersPage from "./pages/latestOffer/LatestOffersPage";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -183,13 +191,18 @@ function App() {
           />
           <Route exact path="/Contact" render={(props) => <Contact />} />
           <Route exact path="/Authors" render={(props) => <Author />} />
-          <Route
-            exact
-            path="/Item-Details"
-            render={(props) => <ItemDetails />}
-          />
           <Route exact path="/Activity" render={(props) => <Activity />} />
           <Route exact path="/Explore" render={(props) => <Explore />} />
+          <Route
+            exact
+            path="/offers"
+            render={(props) => <LatestOffersPage {...props} user={user} />}
+          />
+          <Route
+            exact
+            path="/trades"
+            render={(props) => <LatestTradePage {...props} user={user} />}
+          />
           <Route
             exact
             path="/Item/Create"
@@ -202,6 +215,17 @@ function App() {
           />
           <Route
             exact
+            path="/collection/edit/:name"
+            render={(props) => <CreateCollectionPage {...props} user={user} />}
+          />
+          <Route
+            exact
+            path="/Item-Details"
+            render={(props) => <ItemDetails />}
+          />
+
+          <Route
+            exact
             path="/Account"
             render={(props) => <AccountPage {...props} user={user} />}
           />
@@ -210,11 +234,42 @@ function App() {
             path="/Account/Settings"
             render={(props) => <SettingsPage {...props} user={user} />}
           />
+          <Route
+            exact
+            path="/NFTs"
+            render={(props) => <VelasPage {...props} user={user} />}
+          />
+          <Route
+            exact
+            path="/myNfts"
+            render={(props) => <MyNFTsPage {...props} user={user} />}
+          />
+          <Route
+            exact
+            path="/myCollections"
+            render={(props) => <MyCollectionsPage {...props} user={user} />}
+          />
+          <Route
+            exact
+            path="/collections"
+            render={(props) => <CollectionsPage {...props} user={user} />}
+          />
+          <Route
+            exact
+            path="/collections/:name"
+            render={(props) => <CollectionDetailPage {...props} user={user} />}
+          />
+          <Route
+            exact
+            path="/item/:collection_address/:tokenId"
+            render={(props) => <VelasClubPage {...props} user={user} />}
+          />
           {/* <Route exact path="/account/settings" render={(props) => (<SettingsPage {...props} user={user} />)} />
          <Route exact path="/collections/:name" render={(props) => (<CollectionDetailPage {...props} user={user} />)} />
          <Route exact path="/NFTs" render={(props) => (<VelasPage {...props} user={user} />)} />
          <Route exact path="/item/:collection_address/:tokenId" render={(props) => (<VelasClubPage {...props} user={user} />)} /> */}
         </Switch>
+        <Footer />
       </Router>
       {/* <Modal
        open={!!errorModalOpen && !active}

@@ -85,7 +85,6 @@ const LiveAuctions = () => {
       ) : (
         <Title title="Live Auctions" />
       )}
-
       <Slider className="slider-container" {...settings}>
         {data.map((item: any, index: any) => (
           <AuctionCard item={item} TodayPick={false} />

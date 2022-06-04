@@ -5,15 +5,15 @@ import "./styles.css";
 import itemDetail from "../../assets/images/item-detail.jpg";
 import LiveAuctions from "../../components/LiveAuctions/LiveAuctions";
 
-const ItemDetails = () => {
+const ItemDetails = (itemDetailsPage: any) => {
   return (
     <div className="item-details">
-      <PageHeader pageHeader="Item Details" />
+      {/* <PageHeader pageHeader="Item Details" /> */}
       <div className="sc-item-details">
         <img src={itemDetail} alt="" />
         <PlaceBid />
       </div>
-      <LiveAuctions />
+      {itemDetailsPage && <LiveAuctions />}
     </div>
   );
 };

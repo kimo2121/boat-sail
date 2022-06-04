@@ -328,6 +328,16 @@
 .saveBtn:hover {
   color: #5141fc !important;
 }
+.bid-modal {
+  width: 100%;
+  background-color: #5141fc;
+  color: white;
+}
+.bid-modal:hover {
+  background-color: #3221f0;
+  border-color: #3221f0;
+  color: white;
+}
 @media screen and (max-width: 1200px) {
   .connect-wallet {
     padding: 10px;

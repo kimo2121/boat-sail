@@ -4,9 +4,9 @@ import "./styles.css";
 import avt from "../../assets/images/avt-8.jpg";
 import Timer from "../Timer/Timer";
 import Button from "../MoreComponents/Button";
-import { ReactComponent as ShoppingBag } from "../../assets/icons/shopping-bag.svg";
 import { Col, Container, Nav, Row, Tab, Tabs } from "react-bootstrap";
 import BidHistory from "../MoreComponents/BidHistory";
+import BidModal from "../connectModal/BidModal";
 
 const OwnedCreatedBy = ({ name, title, styles }: any) => {
   return (
@@ -46,12 +46,8 @@ const PlaceBid = () => {
       </div>
       <br />
       <br />
-      <Button
-        itemDetails={true}
-        icon={<ShoppingBag />}
-        label="Place a bid"
-        className="send-message item-detail"
-      />
+      <BidModal />
+      <Button />
       <div className="place-bid-nav-items">
         <Tab.Container defaultActiveKey="bid-history">
           <Nav className="place-bid-nav-item-container">

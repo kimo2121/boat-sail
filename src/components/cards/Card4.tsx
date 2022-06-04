@@ -24,6 +24,7 @@ const Card4 = (props: any) => {
           <img src={item && item.assetUrl} alt="" className="nft" />
         )}
       </div>
+
       <h3>{item.name}</h3>
       <p className="socre">{item.description}</p>
     </div>

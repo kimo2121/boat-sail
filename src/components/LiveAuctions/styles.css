@@ -1,9 +1,11 @@
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
-.live-auction {
+.live-auction,
+.pageItemDetail {
   background-color: #14141f;
   padding-top: 80px;
+  width: 1440px;
   padding-bottom: 70px;
 }
 .cards-container {
@@ -95,6 +97,12 @@
   font-weight: 600;
 }
 @media screen and (max-width: 1440px) {
+  .live-auction {
+    width: 100%;
+  }
+  .pageItemDetail {
+    width: 1200px;
+  }
   .slider-container {
     width: 100%;
   }
@@ -104,5 +112,31 @@
   }
   .slider-container {
     height: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .pageItemDetail {
+    width: 1024px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .pageItemDetail {
+    width: 768px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .pageItemDetail {
+    width: 576px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .pageItemDetail {
+    width: 450px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 455px) {
+  .pageItemDetail {
+    width: 350px;
   }
 }

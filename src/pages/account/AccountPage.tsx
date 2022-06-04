@@ -156,7 +156,7 @@ const AccountPage = (props: any) => {
       <Menu menuOpen={menuOpen} setMenuOpen={setMenuOpen} /> */}
       <div className="page accountPage">
         <PageHeader pageHeader="Account Settings" />
-        <div
+        {/* <div
           className="loding"
           style={{
             width: "100%",
@@ -165,7 +165,7 @@ const AccountPage = (props: any) => {
           }}
         >
           <Loading />
-        </div>
+        </div> */}
         <div
           className="sections"
           style={{ width: "100%", height: sectionHeight }}
